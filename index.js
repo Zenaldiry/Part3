@@ -6,10 +6,11 @@ app.use(express.json())
 app.use(cors())
 app.use(express.static('dist'))
 const People = require('./models/phone')
+/* eslint-disable no-unused-vars */
 morgan.token('content', function (req, res) {
-  console.log(res)
   return JSON.stringify({ name: req.body.name, number: req.body.number })
 })
+/* eslint-enable no-unused-vars */
 
 app.use(morgan('tiny', { skip: (req) => req.method === 'POST' }))
 

@@ -37,7 +37,9 @@ phonebookSchema.set('toJSON', {
     delete returned.date
   },
 })
+
+/* eslint-disable no-unused-vars */
 const Contact = new mongoose.model('Contact', phonebookSchema)
-console.log(Contact)
+/* eslint-enable no-unused-vars */
 
 module.exports = mongoose.model('Contact', phonebookSchema)
